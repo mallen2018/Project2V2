@@ -184,13 +184,12 @@
 	</div>
 
 	<script type="text/javascript">
-    //custom google search query//
-    var zipcode = $("#zipcode").val();  //need to fix zipcode variable it is showing blank doesn't matter if this function is above the other click or not. maybe afer submit .then this one?
-    
-    var queryurl = "https://www.google.com/search?source=hp&ei=FXKRW_bDIcK4sQWFh6GoAw&q=puppy+store+"+zipcode;
+
     
 
     $("#storesearch").on("click", function (){
+		   var zipcode = $("#zipcode").val();
+   			 var queryurl = "https://www.google.com/search?source=hp&ei=FXKRW_bDIcK4sQWFh6GoAw&q=puppy+store+"+zipcode;        //custom google search query//
 				window.open(queryurl, '_blank');
                 console.log("onclickworking");
                 console.log(zipcode)  
